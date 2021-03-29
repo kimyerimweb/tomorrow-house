@@ -1,9 +1,9 @@
 * {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
   margin: 0;
   font-family: $font-main;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
@@ -30,7 +30,7 @@ input,
 select,
 textarea {
   background-color: transparent;
-  border: none;
+  border: 0;
 
   &:focus {
     outline: none;
@@ -45,6 +45,6 @@ button {
 
 ul,
 ol {
+  padding-left: 0;
   list-style: none;
-  padding: 0;
 }
