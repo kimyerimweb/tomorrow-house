@@ -1,0 +1,23 @@
+.sr-only {
+  position: absolute;
+  top: -99999999px;
+  left: -99999999px;
+  z-index: -99999999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.sm-only {
+  @media screen and (min-width: $md-breakpoint) {
+    display: none !important;
+  }
+}
+
+.lg-only {
+  @media screen and (max-width: $lg-breakpoint - 1) {
+    display: none !important;
+  }
+}
