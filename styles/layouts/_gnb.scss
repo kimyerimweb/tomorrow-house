@@ -1,10 +1,10 @@
 .gnb {
   position: relative;
+  border-bottom: 1px solid $border;
 
   &-wrapper {
     @include flexbox(between);
     height: 50px;
-    border-bottom: 1px solid $border;
   }
 
   &-right {
@@ -38,6 +38,62 @@
         display: block;
         width: auto;
         height: 20px;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    &-wrapper {
+      height: 80px;
+    }
+
+    .gnb-left {
+      @include flexbox(start);
+    }
+
+    .gnb-right {
+      @include flexbox(end);
+
+      .gnb-icon-button-group {
+        margin-right: 24px;
+
+        .gnb-search-button {
+          margin-right: 0;
+        }
+
+        .gnb-icon-button {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .logo {
+      position: static;
+      margin-right: 32px;
+      transform: none;
+
+      a {
+        img {
+          width: auto;
+          height: 24px;
+        }
+      }
+    }
+
+    .btn-primary {
+      width: 88px;
+
+      i {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    .gnb-right {
+      .input-group {
+        width: 264px;
+        margin-right: 24px;
       }
     }
   }
