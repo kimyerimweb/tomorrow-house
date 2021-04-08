@@ -35,11 +35,11 @@
       height: 80px;
     }
 
-    .gnb-left {
+    &-left {
       @include flexbox(start);
     }
 
-    .gnb-right {
+    &-right {
       @include flexbox(end);
 
       .gnb-icon-button-group {
@@ -47,6 +47,24 @@
 
         .gnb-icon-button {
           margin-right: 8px;
+        }
+
+        .gnb-auth {
+          margin-left: 8px;
+
+          a {
+            @include text-style(14, $secondary);
+            font-weight: 700;
+            transition: color 200ms ease-in-out;
+
+            &:hover {
+              color: $blue;
+            }
+
+            &:first-child {
+              margin-right: 12px;
+            }
+          }
         }
       }
     }
@@ -74,7 +92,7 @@
   }
 
   @include responsive(D) {
-    .gnb-right {
+    &-right {
       .input-group {
         width: 264px;
         margin-right: 24px;
