@@ -41,6 +41,7 @@
     button {
       width: 100%;
       @include flexbox(start);
+      @include text-style(16, $primary);
       height: 44px;
       padding: 0 8px;
       transition: background-color 200ms ease-in-out;
