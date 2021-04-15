@@ -55,15 +55,12 @@
 
   &-button {
     .avatar-32 {
-      img {
-        border: 3px solid $white;
-        border-radius: 50%;
-        transition: border-color 200ms ease-in-out;
+      border: 3px solid $white;
+      transition: border-color 200ms ease-in-out;
 
-        &:hover,
-        &:active {
-          border: 3px solid $blue;
-        }
+      &:hover,
+      &.is-active {
+        border: 3px solid $blue;
       }
     }
   }
