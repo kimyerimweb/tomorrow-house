@@ -115,39 +115,39 @@
                   </a>
 
                   <div class="my-menu sm-hidden">
-                      <button
-                        class="my-menu-button sm-hidden"
-                        type="button"
-                        aria-label="마이메뉴 열기 버튼"
-                      >
-                        <div class="avatar-32">
-                          <img
-                            src="./assets/image/img-user-01.jpg"
-                            alt="사달러아저씨"
-                          />
-                        </div>
-                      </button>
-                  
-                      <div class="my-menu-content">
-                        <ul class="my-menu-list">
-                          <li class="my-menu-item">
-                            <a href="/">마이페이지</a>
-                          </li>
-                          <li class="my-menu-item">
-                            <a href="/">나의 쇼핑</a>
-                          </li>
-                          <li class="my-menu-item">
-                            <a href="/">이벤트</a>
-                          </li>
-                          <li class="my-menu-item">
-                            <button type="button">로그아웃</button>
-                          </li>
-                        </ul>
-                      </div>  
+                    <button
+                      class="my-menu-button sm-hidden"
+                      type="button"
+                      aria-label="마이메뉴 열기 버튼"
+                    >
+                      <div class="avatar-32 is-active">
+                        <img
+                          src="./assets/image/img-user-01.jpg"
+                          alt="사달러아저씨"
+                        />
+                      </div>
+                    </button>
+
+                    <div class="my-menu-content">
+                      <ul class="my-menu-list">
+                        <li class="my-menu-item">
+                          <a href="/">마이페이지</a>
+                        </li>
+                        <li class="my-menu-item">
+                          <a href="/">나의 쇼핑</a>
+                        </li>
+                        <li class="my-menu-item">
+                          <a href="/">이벤트</a>
+                        </li>
+                        <li class="my-menu-item">
+                          <button type="button">로그아웃</button>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
 
-                <!-- 로그인을 하지 않은 경우 -->
-                <!-- <div class="gnb-icon-button-group">
+                  <!-- 로그인을 하지 않은 경우 -->
+                  <!-- <div class="gnb-icon-button-group">
                   <button
                     class="gnb-icon-button is-search lg-hidden"
                     type="button"
@@ -171,15 +171,86 @@
                   </div>
                 </div> -->
 
-                <button class="sm-hidden btn-primary btn-40" type="button">
-                  글쓰기
-                  <i class="ic-chevron" aria-hidden></i>
-                </button>
+                  <button class="sm-hidden btn-primary btn-40" type="button">
+                    글쓰기
+                    <i class="ic-chevron" aria-hidden></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </header>
+    <aside class="sidebar sm-only">
+      <header class="sidebar-header">
+        <h1>
+          <a href="/">
+            <img src="assets/Logo.svg" alt="내일의 집" />
+          </a>
+        </h1>
+
+        <!-- 로그인을 한 경우 -->
+        <div class="sidebar-user">
+          <a href="/">
+            <div class="avatar-24">
+              <img src="./assets/image/img-user-01.jpg" alt="사달러아저씨" />
+            </div>
+            <strong class="username">사달라</strong>
+          </a>
+        </div>
+
+        <!-- 로그인을 하지 않은 경우 -->
+        <div class="sidebar-auth">
+          <a class="btn-40 btn-outlined" href="">로그인</a>
+          <a class="btn-40 btn-primary" href="">회원가입</a>
+        </div>
+      </header>
+
+      <nav class="sidebar-nav">
+        <h2 class="sr-only">메뉴</h2>
+        <div class="dwarer-menu">
+          <button class="dwarer-menu-button" type="button">
+            <i class="ic-store" aria-hidden></i>
+            스토어
+            <i class="ic-chevron" aria-hidden></i>
+          </button>
+
+          <div class="dwarer-menu-content">
+            <ul claas="dwarer-menu-list">
+              <li class="dwarer-menu-item"><a href="/">스토어홈</a></li>
+              <li class="dwarer-menu-item"><a href="/">카데고리</a></li>
+              <li class="dwarer-menu-item"><a href="/">신혼가구</a></li>
+              <li class="dwarer-menu-item">
+                <a href="/">
+                  기획전
+                  <i class="ic-new" lang="en" aria-label="New"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 로그인을 한 경우 -->
+        <div class="sidebar-user-menu">
+          <ul class="sidebar-user-menu-list">
+            <li class="sidebar-user-menu-item">
+              <a href="/"> 마이페이지 </a>
+            </li>
+            <li class="sidebar-user-menu-item">
+              <a href="/"> 나의 쇼핑 </a>
+            </li>
+            <li class="sidebar-user-menu-item">
+              <a href="/"> 스크랩북 </a>
+            </li>
+            <li class="sidebar-user-menu-item">
+              <a href="/"> 알림 </a>
+            </li>
+            <li class="sidebar-user-menu-item">
+              <a href="/"> 이벤트 </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
   </body>
 </html>
