@@ -78,3 +78,51 @@
   </button>
 </div>
 ```
+
+### 2. Sidebar
+
+- 로그인을 하지 않은 경우
+
+```html
+<div class="sidebar-auth">
+  <a class="btn-40 btn-outlined" href="">로그인</a>
+  <a class="btn-40 btn-primary" href="">회원가입</a>
+</div>
+```
+
+div class="sidebar-user-menu"로 시작하는 html코드는 사용하지 않습니다. (자세한 사항은 아래 로그인을 한 경우에 코드 첨부)
+
+- 로그인을 한 경우
+
+```html
+<div class="sidebar-user">
+  <a href="/">
+    <div class="avatar-24">
+      <img src="./assets/image/img-user-01.jpg" alt="사달러아저씨" />
+    </div>
+    <strong class="username">사달라사달라사달라사달라사달라</strong>
+  </a>
+</div>
+```
+
+```html
+<div class="sidebar-user-menu">
+  <ul class="sidebar-user-menu-list">
+    <li class="sidebar-user-menu-item">
+      <a href="/"> 마이페이지 </a>
+    </li>
+    <li class="sidebar-user-menu-item">
+      <a href="/"> 나의 쇼핑 </a>
+    </li>
+    <li class="sidebar-user-menu-item">
+      <a href="/"> 스크랩북 </a>
+    </li>
+    <li class="sidebar-user-menu-item">
+      <a href="/"> 알림 </a>
+    </li>
+    <li class="sidebar-user-menu-item">
+      <a href="/"> 이벤트 </a>
+    </li>
+  </ul>
+</div>
+```
