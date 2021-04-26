@@ -1,9 +1,11 @@
 .drawer-menu {
   $list-height: 36px;
-  $list-padding: 8px;
+  $list-padding: 20px;
   $community-length: 8;
   $store-length: 8;
   $expert-length: 2;
+
+  border-top: 1px solid $border;
 
   @function _calculate-max-content-height($length) {
     @return $list-height * $length + $list-padding;
@@ -47,7 +49,7 @@
     @include text-style(18, $primary);
     padding: 0 8px;
     font-weight: 700;
-    border-top: 1px solid $border;
+
     transition: color 200ms ease-in-out;
 
     i {
@@ -68,6 +70,10 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 200ms ease-in-out;
+
+    &.is-expert {
+      border-bottom: 1px solid $border;
+    }
   }
 
   &-item {
