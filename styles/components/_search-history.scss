@@ -15,9 +15,12 @@
   &-content {
     &-item {
       position: relative;
+      border-radius: 2px;
+      transition: background-color 200ms ease-in-out, color 300ms ease-in-out;
 
       .word-button {
         @include text-style(16, $primary);
+        width: 100%;
         padding: 10px $close-button-size 10px 8px;
         font-weight: 400;
         text-align: left;
@@ -32,6 +35,14 @@
         height: $close-button-size;
         font-size: 16px;
         color: $tertiary;
+      }
+
+      &:hover {
+        background-color: $background;
+
+        .delete-button {
+          color: $primary;
+        }
       }
     }
 
