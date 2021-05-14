@@ -3,6 +3,7 @@
   $lnb-link-padding: 8px;
   $grid-margin: $sm-margin + $gutter / 2;
 
+  @include no-scrollbar;
   overflow-x: auto;
   overscroll-behavior: contain;
 
@@ -31,9 +32,5 @@
         border-bottom: 2px solid $blue;
       }
     }
-  }
-
-  &::-webkit-scrollbar {
-    display: none;
   }
 }
