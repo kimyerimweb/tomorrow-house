@@ -1,0 +1,26 @@
+.global-header {
+  width: 100%;
+  height: $gnb-height-sm + $lnb-height-sm;
+
+  .gnb {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .lnb {
+    position: fixed;
+    top: $gnb-height-sm;
+    left: 0;
+    width: 100%;
+  }
+
+  @include responsive(T) {
+    height: $gnb-height-md + $lnb-height-md;
+
+    .lnb {
+      top: $gnb-height-md;
+    }
+  }
+}
