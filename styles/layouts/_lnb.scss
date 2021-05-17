@@ -3,6 +3,7 @@
   $grid-margin: $sm-margin + $gutter / 2;
 
   @include no-scrollbar;
+  z-index: $lnb-level;
   overflow-x: auto;
   background-color: $white;
   overscroll-behavior: contain;
