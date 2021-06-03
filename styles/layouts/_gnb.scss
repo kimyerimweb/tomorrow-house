@@ -1,8 +1,8 @@
 .gnb {
   position: relative;
+  z-index: $gnb-level;
   background-color: $white;
   border-bottom: 1px solid $border;
-  z-index: $gnb-level;
 
   &-wrapper {
     @include flexbox(between);
