@@ -49,4 +49,108 @@
     width: 100%;
     height: auto;
   }
+
+  @include responsive(T) {
+    $button-size-md: 56px;
+    @include column-flexbox(start, start);
+
+    &-thumbnail {
+      position: static;
+      transform: none;
+    }
+
+    &-slider {
+      margin: 0 30px 8px 0;
+
+      img {
+        border-radius: 4px;
+      }
+    }
+
+    .thumbnail-list {
+      @include no-scrollbar;
+      overflow: auto;
+    }
+
+    .thumbnail-item {
+      &.tns-nav-active {
+        button {
+          border: 2px solid $blue;
+          transform: none;
+        }
+      }
+
+      button {
+        @include flexbox;
+        width: $button-size-md;
+        height: $button-size-md;
+        overflow: hidden;
+        background-color: transparent;
+        border-radius: 4px;
+        opacity: 1;
+      }
+
+      img {
+        display: block;
+        width: $button-size-md;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    $button-size-lg: 75px;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+
+    &-thumbnail {
+      position: static;
+      transform: none;
+    }
+
+    &-slider {
+      width: 500px;
+      height: 500px;
+      margin: 0;
+
+      img {
+        border-radius: 4px;
+      }
+    }
+
+    .thumbnail-list {
+      @include column-flexbox;
+      @include no-scrollbar;
+      overflow: auto;
+    }
+
+    .thumbnail-item {
+      margin-bottom: 8px;
+
+      &.tns-nav-active {
+        button {
+          border: 2px solid $blue;
+          transform: none;
+        }
+      }
+
+      &:last-child {
+        margin-right: 8px;
+      }
+
+      button {
+        @include flexbox;
+        width: $button-size-lg;
+        height: $button-size-lg;
+        overflow: hidden;
+        background-color: transparent;
+        border-radius: 4px;
+        opacity: 1;
+      }
+
+      img {
+        display: block;
+        width: $button-size-lg;
+      }
+    }
+  }
 }
