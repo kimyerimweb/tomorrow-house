@@ -9,38 +9,38 @@
   &-thumbnail {
     @include position-center-x;
     bottom: 16px;
+  }
 
-    .thumbnail-list {
-      @include flexbox;
+  .thumbnail-list {
+    @include flexbox;
+  }
 
-      .thumbnail-item {
-        @include flexbox;
-        margin-right: 8px;
+  .thumbnail-item {
+    @include flexbox;
+    margin-right: 8px;
 
-        &:last-child {
-          margin-right: 0;
-        }
+    &:last-child {
+      margin-right: 0;
+    }
 
-        &.tns-nav-active {
-          button {
-            opacity: 1;
-            transform: scale(1.3333);
-          }
-        }
-
-        button {
-          width: 6px;
-          height: 6px;
-          background-color: $white;
-          border-radius: 50%;
-          opacity: 0.7;
-          transition: all 100ms ease-in-out;
-        }
-
-        img {
-          display: none;
-        }
+    &.tns-nav-active {
+      button {
+        opacity: 1;
+        transform: scale(1.3333);
       }
+    }
+
+    button {
+      width: 6px;
+      height: 6px;
+      background-color: $white;
+      border-radius: 50%;
+      opacity: 0.7;
+      transition: all 100ms ease-in-out;
+    }
+
+    img {
+      display: none;
     }
   }
 
