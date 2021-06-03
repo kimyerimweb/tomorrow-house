@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/kimyerimweb/tomorrow-house#readme",
   "dependencies": {
-    "node-sass": "^5.0.0"
+    "node-sass": "^5.0.0",
+    "tiny-slider": "^2.9.3"
   }
 }
