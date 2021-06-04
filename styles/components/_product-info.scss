@@ -160,4 +160,10 @@
       border-bottom: 1px solid $border;
     }
   }
+
+  @include responsive(D) {
+    .product-info-price {
+      margin-bottom: 20px;
+    }
+  }
 }
