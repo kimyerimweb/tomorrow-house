@@ -16,7 +16,8 @@
     @include flexbox(start);
     margin-bottom: 16px;
 
-    .star-rating-13 {
+    .star-rating {
+      @include star-rating(13px);
       margin-right: 8px;
     }
 
@@ -66,6 +67,8 @@
   }
 
   .info-point {
+    padding-bottom: 16px;
+
     strong {
       @include text-style(13, $blue);
       margin-right: 4px;
@@ -79,12 +82,82 @@
   }
 
   .product-info-delivery {
+    width: 100%;
     padding-top: 13px;
     border-top: 1px solid $border;
 
     span {
       display: block;
       margin-bottom: 2px;
+    }
+  }
+
+  @include responsive(T) {
+    padding: 0;
+
+    .info-brand {
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .info-title {
+      @include text-style(24);
+      margin-bottom: 8px;
+    }
+
+    .info-review {
+      @include flexbox(start);
+      margin-bottom: 16px;
+
+      .star-rating {
+        @include star-rating(16px);
+        margin-right: 8px;
+      }
+
+      a {
+        @include flexbox;
+      }
+    }
+
+    .info-price-wrapper {
+      @include flexbox(start, end);
+      margin-bottom: 12px;
+
+      .discount-rate {
+        margin-right: 16px;
+
+        strong {
+          font-family: 'Tahoma', sans-serif;
+          font-size: 44px;
+          font-weight: 700;
+          line-height: 36px;
+          color: $blue;
+        }
+
+        span {
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 1em;
+          color: $blue;
+        }
+      }
+
+      .info-sale-price {
+        margin-bottom: 0;
+
+        .price-32 {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .info-point {
+      padding-bottom: 20px;
+    }
+
+    .product-info-delivery {
+      padding: 16px 0 20px 0;
+      border-bottom: 1px solid $border;
     }
   }
 }
