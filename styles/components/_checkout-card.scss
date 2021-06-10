@@ -18,12 +18,27 @@
       position: absolute;
       top: 0;
       right: 0;
+
+      &:hover,
+      &:active {
+        opacity: 0.4;
+      }
     }
   }
 
   .checkout-select {
     position: relative;
     display: inline-block;
+
+    &:hover {
+      .form-select {
+        border-color: $tertiary;
+      }
+
+      .ic-caret {
+        color: $secondary;
+      }
+    }
 
     .form-select {
       @include text-style(14, $primary);
@@ -34,6 +49,7 @@
       background-color: $white;
       border: 1px solid $border;
       border-radius: 3px;
+      transition: border-color 200ms ease-in-out;
     }
 
     .ic-caret {
@@ -42,6 +58,7 @@
       font-size: 20px;
       color: $tertiary;
       pointer-events: none;
+      transition: color 200ms ease-in-out;
     }
   }
 
