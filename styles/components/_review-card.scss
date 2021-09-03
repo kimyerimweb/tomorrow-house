@@ -1,0 +1,106 @@
+.review-card {
+  margin: 20px 0;
+
+  &-header {
+    @include flexbox(start);
+
+    .avatar-24,
+    .user-name {
+      &:active {
+        opacity: 0.5;
+      }
+    }
+
+    .avatar-24 {
+      margin-right: 8px;
+    }
+
+    .user-name {
+      strong {
+        @include text-style(13, $primary);
+        font-weight: 400;
+      }
+    }
+
+    .detail {
+      @include flexbox;
+
+      .star-rating-13 {
+        margin-right: 4px;
+      }
+
+      .misc {
+        @include flexbox;
+        @include text-style(12, $secondary);
+        margin-bottom: 1px;
+      }
+
+      time::after {
+        display: inline-block;
+        content: '∙';
+      }
+    }
+  }
+
+  &-body {
+    @include text-style(13, $primary);
+    margin-top: 20px;
+  }
+
+  &-footer {
+    @include flexbox(start);
+    margin: 20px 0;
+
+    button {
+      width: 120px;
+      margin-right: 8px;
+    }
+
+    p {
+      @include text-style(12, $primary);
+      font-weight: 400;
+
+      strong {
+        font-weight: 400;
+
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  @include responsive(T) {
+    padding-left: 32px;
+    margin-top: 40px;
+
+    &-header {
+      margin-left: -32px;
+
+      .user-name {
+        @include text-style(14);
+      }
+    }
+
+    &-body {
+      p {
+        @include text-style(14);
+      }
+    }
+
+    &-footer {
+      margin-bottom: 24px;
+    }
+  }
+
+  @include responsive(D) {
+    &-header {
+      .avatar-24,
+      .user-name {
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
