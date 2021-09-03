@@ -24,7 +24,7 @@
     }
 
     &.page-next {
-      margin-left: 24px;
+      margin-left: 16px;
 
       .ic-chevron {
         transform: rotate(-90deg);
@@ -48,7 +48,7 @@
     @extend %page-item-base;
     min-width: 26px;
     padding: 0 4px;
-    margin-right: 4px;
+    margin: 0 4px 1px 0;
 
     &:last-child {
       margin-right: 0;
@@ -61,6 +61,12 @@
     &.is-active {
       color: $white;
       background-color: $blue;
+    }
+  }
+
+  @include responsive(T) {
+    &.page-next {
+      margin-left: 24px;
     }
   }
 }
