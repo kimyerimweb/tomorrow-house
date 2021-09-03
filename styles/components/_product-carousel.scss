@@ -52,6 +52,7 @@
   @include responsive(T) {
     $button-size-md: 56px;
     @include column-flexbox(start, start);
+    margin-bottom: 40px;
 
     &-thumbnail {
       position: static;
