@@ -2,19 +2,10 @@
   "name": "tomorrow-house",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "node-sass": "node-sass",
-    "sass": "node-sass -wr --source-map true ./styles/main.scss ./style.css"
+    "dev": "webpack --mode=development"
   },
-  "scssLint.configDir": ".",
-  "scssLint.languages": [
-    "sass",
-    "scss"
-  ],
-  "scssLint.runOnTextChange": true,
-  "editor.formatOnSave": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kimyerimweb/tomorrow-house.git"
@@ -27,7 +18,14 @@
   },
   "homepage": "https://github.com/kimyerimweb/tomorrow-house#readme",
   "dependencies": {
-    "node-sass": "^5.0.0",
-    "tiny-slider": "^2.9.3"
+    "css-loader": "^6.7.1",
+    "style-loader": "^3.3.1",
+    "tiny-slider": "^2.9.4",
+    "webpack-cli": "^4.9.2"
+  },
+  "devDependencies": {
+    "sass": "^1.49.11",
+    "sass-loader": "^12.6.0",
+    "webpack": "^5.71.0"
   }
 }
