@@ -32,18 +32,37 @@
         font-weight: 400;
       }
     }
+
+    .is-answered {
+      color: $blue;
+    }
   }
 
   &-body {
     @include text-style(13);
 
-    .question-content {
+    .inquiry-content {
       position: relative;
       padding-left: 20px;
+
+      &:first-child:not(:last-child) {
+        margin-bottom: 12px;
+      }
     
       .ic-lock {
         @include text-style(16,$tertiary);
         margin-right: 8px;
+      }
+
+      .seller {
+        @include flexbox(start);
+        strong {
+          margin-right: 4px;
+        }
+
+        time {
+          @include text-style(12,$tertiary);
+        }
       }
     }
 
@@ -70,11 +89,21 @@
 
       .question-content {
         padding-left: 24px;
+
+        &:first-child:not(:last-child) {
+          margin-bottom: 16px;
+        }
       }
 
       span {
         @include text-style(16);
       }
+    }
+  }
+
+  @include responsive(D) {
+    &-body {
+      @include text-style(16);
     }
   }
 }
