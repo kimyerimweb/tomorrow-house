@@ -1,4 +1,14 @@
 .product-inquiry {
+    .inquiry-empty {
+        padding: 48px 0;
+        @include text-style(16,$secondary);
+        text-align: center;
+
+        @include responsive(T) {
+            padding: 20px;
+        }
+    }
+
     @include mobile-only {
         padding-bottom: 0;
 
