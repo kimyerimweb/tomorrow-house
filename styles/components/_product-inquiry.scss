@@ -1,0 +1,26 @@
+.product-inquiry {
+    @include mobile-only {
+        padding-bottom: 0;
+
+        &.is-open {
+            padding-bottom: 20px;
+
+            .text-button {
+                display: block;
+            }
+            .product-section-content {
+                display: block;
+            }
+            .icon-button {
+                display: none;
+            }
+        }
+
+        .text-button {
+            display: none;
+        }
+        .product-section-content {
+            display: none;
+        }
+    }
+}
