@@ -40,6 +40,11 @@
     .question-content {
       position: relative;
       padding-left: 20px;
+    
+      .ic-lock {
+        @include text-style(16,$tertiary);
+        margin-right: 8px;
+      }
     }
 
     span {
