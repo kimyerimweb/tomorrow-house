@@ -1,0 +1,70 @@
+.product-card {
+  &-image {
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &-brand {
+    @include text-style(12, $secondary);
+  }
+
+  &-title {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+
+  &-price {
+    margin-bottom: 4px;
+    span {
+      @include text-style(18, $blue);
+      font-weight: 700;
+    }
+
+    strong {
+      @include text-style(18, $dark);
+      font-weight: 700;
+    }
+  }
+
+  &-detail {
+    @include flexbox(start);
+
+    margin-bottom: 8px;
+    .rating {
+      @include text-style(12);
+      @include flexbox(start);
+      margin-right: 8px;
+
+      dd {
+        color: $primary;
+        font-weight: 700;
+      }
+    }
+    .ic-star {
+      color: $blue;
+      margin-right: 2px;
+    }
+
+    .review {
+      @include text-style(12, $secondary);
+      @include flexbox(start);
+      font-weight: 700;
+    }
+  }
+}
+
+@include responsive(T) {
+  .product-card {
+    &-brand {
+      margin-bottom: 4px;
+    }
+  }
+}

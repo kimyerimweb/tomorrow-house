@@ -1,0 +1,53 @@
+.product-recommendation {
+  ul {
+    @include flexbox(between, start);
+    flex-wrap: wrap;
+  }
+  .product-item {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+
+    &:nth-child(2n-1) {
+      margin-right: 20px;
+    }
+
+    a {
+      display: block;
+
+      img {
+        transition: all 200ms ease-in-out;
+      }
+
+      &:active,
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+
+        .product-card-title {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  @include responsive(T) {
+    ul {
+      flex-wrap: nowrap;
+    }
+
+    .product-item {
+      width: calc(33% - 10px);
+      margin-right: 16px;
+      margin-bottom: 0;
+
+      &:nth-child(3) {
+        margin-right: 0;
+      }
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
