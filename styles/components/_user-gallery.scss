@@ -1,7 +1,58 @@
 .user-gallery {
   margin: 0 -#{$grid-margin};
 
+  &-slider {
+    margin-bottom: 4px;
+  }
+
+  .thumnail-list {
+    @include flexbox(start);
+    padding-left: 2px;
+  }
+
+  .thumnail-item {
+    margin-right: 4px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    button {
+      @include flexbox;
+      width: 64px;
+      height: 64px;
+      border-radius: 4px;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &.tns-nav-active {
+        border: 3px solid $blue;
+      }
+    }
+  }
+
   @include responsive(T) {
     margin: 0;
+
+    &-slider {
+      margin-bottom: 6px;
+    }
+
+    .thumnail-list {
+      padding-left: 0;
+    }
+
+    .thumnail-item {
+      button {
+        width: 75px;
+        height: 75px;
+      }
+    }
   }
 }
