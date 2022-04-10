@@ -5,6 +5,7 @@ import './javascript/sidebarDrawer'
 
 import './javascript/productShipmentHeader'
 import './javascript/review'
+import './javascript/productTab'
 
 import './javascript/searchModal'
 import './javascript/myMenu'
