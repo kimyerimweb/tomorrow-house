@@ -6,3 +6,5 @@ import './javascript/sidebarDrawer'
 import './javascript/productShipmentHeader'
 
 import './javascript/searchModal'
+
+import './javascript/orderCta'
