@@ -7,5 +7,6 @@ import './javascript/productShipmentHeader'
 
 import './javascript/searchModal'
 import './javascript/myMenu'
+import './javascript/gnbSearch'
 
 import './javascript/orderCta'
