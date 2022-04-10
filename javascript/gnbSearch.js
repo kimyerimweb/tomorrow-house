@@ -3,6 +3,9 @@ const searchHistory = gnbSearch.querySelector('.search-history')
 const gnbSearchInput = gnbSearch.querySelector('.input-group')
 
 const deleteAllButton = document.querySelector('.search-history-header button')
+const deleteOneButtons = document.querySelectorAll(
+  '.search-history-content .delete-button'
+)
 
 const searchHistoryContentList = document.querySelector(
   '.search-history-content-list'
@@ -19,7 +22,7 @@ function closeSearchModalOnClickingOutside(e) {
 //검색 기록 열기
 function openSearchHistory() {
   //이미 전체 삭제를 한 경우에는 최근 검색창이 뜨지 않게 함
-  if (searchHistoryContentList.childNodes.length === 0) return
+  if (searchHistoryContentList.children.length === 0) return
 
   if (!searchHistory.classList.contains('is-active')) {
     window.addEventListener('click', closeSearchModalOnClickingOutside)
@@ -36,3 +39,18 @@ function deleteAllSearchHistory() {
   searchHistory.classList.remove('is-active')
 }
 deleteAllButton.addEventListener('click', deleteAllSearchHistory)
+
+//검색 기록 한개씩 삭제
+function deleteOneSearchHistory(e) {
+  e.stopPropagation()
+  const searchHistoryItem = this.parentNode
+  searchHistoryContentList.removeChild(searchHistoryItem)
+
+  //만약 다 삭제하면 검색 기록 창을 꺼버림
+  if (searchHistoryContentList.children.length === 0) {
+    searchHistory.classList.remove('is-active')
+  }
+}
+deleteOneButtons.forEach((el) => {
+  el.addEventListener('click', deleteOneSearchHistory)
+})
