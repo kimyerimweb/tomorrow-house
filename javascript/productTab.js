@@ -101,6 +101,6 @@ productTabButtonList.forEach((button) => {
 })
 
 window.addEventListener('load', detectTabPannelPosition)
-window.addEventListener('resize', detectTabPannelPosition)
+window.addEventListener('resize', _.throttle(detectTabPannelPosition, 1000))
 
-window.addEventListener('scroll', updateProductTabOnScroll)
+window.addEventListener('scroll', _.throttle(updateProductTabOnScroll, 300))
